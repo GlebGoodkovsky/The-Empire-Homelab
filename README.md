@@ -3,6 +3,15 @@
 **Builder:** Gleb Goodkovsky
 
 ---
+
+## Diagram
+
+***(Temporary diagram to show approxmiate homelab setup)***
+
+![temporarydiagram](assets/tempserverdiagram.jpg)
+
+---
+
 ## Current Hardware
 
 <details>
