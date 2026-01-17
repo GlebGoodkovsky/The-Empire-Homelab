@@ -15,42 +15,26 @@
 </details>
 
 <details>
-<summary><strong>Lenovo ThinkCentre M710S SFF Office Desktop PC</strong></summary>
+<summary><strong>Lenovo ThinkCentre M710S SFF</strong></summary>
 
 - i5 6600, 3.20GHz
 - 32GB DDR4 RAM (4x8GB - Upgraded)
-- 256GB Enterprise SSD
+- 256GB Enterprise SSD (Boot/VMs)
 
 </details>
 
 <details>
-<summary><strong>Ethernet Network Switch</strong></summary>
+<summary><strong>Networking & Power</strong></summary>
 
-- TP-Link TL-SG105
-- 5 Port Gigabit Unmanaged 
-
-</details>
-
-<details>
-<summary><strong>CyberPower ST625U Standby UPS System</strong></summary>
-
-- 625VA / 360W
-- 8 Outlets
-- 2 USB Charging Ports
-- USB-HID Data Port (Connected to ThinkCentre)
-
-</details>
-
-<details>
-<summary><strong>Connectivity & Power Spacing</strong></summary>
-
-- Telus WiFi Booster (Existing hardware)
-- DEWENWILS 1 Foot Extension Cords (10-pack)
-- Random Ethernet Cables I found at the moment
+- **TP-Link TL-SG105:** 5 Port Gigabit Unmanaged Switch
+- **CyberPower ST625U UPS:** 625VA / 360W (USB-HID linked to Host)
+- **Telus WiFi Booster:** Primary Uplink
+- **DEWENWILS 1ft Extensions:** Power spacing for high-density shelf
 
 </details>
 
 ---
+
 ## Current Software
 
 <details>
@@ -71,59 +55,86 @@
 <details>
 <summary><strong>VM 100 — db-mc-server</strong></summary>
 
-- Operating System: Debian 13
-- Specs:
+- OS: Debian 13
+- Specs: 
   - 8 GB RAM
   - 3 Cores
   - 40 GB Storage
+- Ingress: Playit.gg Tunnel
 
 </details>
 
 <details>
 <summary><strong>LXC 101 — uptime-kuma</strong></summary>
 
-- Operating System: Debian 12
-- Specs:
+- OS: Debian 12
+- Specs: 
   - 0.5 GB RAM
   - 1 Core
   - 4 GB Storage
+- Role: Service Heartbeat Monitoring
 
 </details>
 
 <details>
 <summary><strong>LXC 102 — syncthing</strong></summary>
 
-- Operating System: Debian 12
-- Specs:
+- OS: Debian 12
+- Specs: 
   - 0.5 GB RAM
   - 1 Core
   - 5 GB Storage
+- Role: Syncing files
 
 </details>
 
 <details>
 <summary><strong>LXC 103 — web-static</strong></summary>
 
-- Operating System: Debian 12
-- Specs:
+- OS: Debian 12
+- Specs: 
   - 0.25 GB RAM
   - 1 Core
   - 4 GB Storage
+- Role: Cloudflare Tunnel Entrypoint
 
 </details>
 
 <details>
 <summary><strong>LXC 104 — n8n-automation</strong></summary>
 
-- Operating System: Debian 12
-- Specs:
-  - 1 GB RAM
+- OS: Debian 12 (Docker)
+- Specs: 
+  - 2.0 GB RAM
   - 1 Core
   - 8 GB Storage
+- Role: Sovereign n8n Logic Engine
 
 </details>
 
 </details>
-
 
 ---
+
+## Operational Protocols
+
+<details>
+<summary><strong>The Power Protector</strong></summary>
+
+- **Logic:** NUT (Master) -> n8n Webhook -> Multi-Node SSH Kill Chain -> Host Shutdown.
+- **Resilience:** Local-IP triggered to bypass external network failure.
+
+</details>
+
+<details>
+<summary><strong>Intelligence Dashboard</strong></summary>
+
+- **Interface:** Telegram Bot
+- **Commands:** 
+  - `/stats pve`: get stats of pve and all LXCs
+  - `/stats vm`: get stats of vm
+  - `/stats pi`: get stats of pi
+  - `/stats help`: get stat command list
+  - `/update`: Manual trigger for safe serverwide update sequence.
+
+</details>
