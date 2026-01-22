@@ -36,6 +36,8 @@
 - 32GB DDR4 RAM (4x8GB - Upgraded)
 - 256GB Enterprise SSD (Boot/VMs)
 
+![thinkcentre](assets/thinkcentre.png)
+
 </details>
 
 <details>
@@ -45,6 +47,12 @@
 - **CyberPower ST625U UPS:** 625VA / 360W (USB-HID linked to Host)
 - **Telus WiFi Booster:** Primary Uplink
 - **DEWENWILS 1ft Extensions:** Power spacing for high-density shelf
+
+![network-switch](assets/network-switch.png)
+
+![UPS-power-bank](assets/ups-power-bank.png)
+
+![wifi-booster](assets/wifi-booster.png)
 
 </details>
 
