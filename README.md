@@ -21,6 +21,8 @@
 - SanDisk 32GB SD Card
 - Raspberry Pi 4 Case, Miuzei Aluminium
 
+![rpi4](assets/rpi4.jpg)
+
 </details>
 
 <details>
