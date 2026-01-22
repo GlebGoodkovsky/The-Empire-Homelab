@@ -63,77 +63,84 @@
 <details>
 <summary><strong>Raspberry Pi 4</strong></summary>
 
-- OS: Raspberry Pi OS Lite (64-bit)
-- Services:
-  - Pi-hole
-  - Tailscale
+- **OS:** Raspberry Pi OS Lite (64-bit)  
+  - [Official OS site](https://www.raspberrypi.com/software/operating-systems/)
+- **Services:**
+  - Pi-hole — [Official site](https://pi-hole.net/)
+  - Tailscale — [Official site](https://tailscale.com/)
 
 </details>
 
 <details>
 <summary><strong>Lenovo ThinkCentre</strong></summary>
 
-- Hypervisor: Proxmox VE 9.1
+- **Hypervisor:** Proxmox VE 9.1  
+  - [Official OS site](https://www.proxmox.com/en/)
+
+</details>
 
 <details>
 <summary><strong>VM 100 — db-mc-server</strong></summary>
 
-- OS: Debian 13
-- Specs: 
+- **OS:** Debian 13  
+  - [Official OS site](https://www.debian.org/)
+- **Specs:** 
   - 8 GB RAM
   - 3 Cores
   - 40 GB Storage
-- Ingress: Playit.gg Tunnel
+- **Ingress:** Playit.gg Tunnel — [Official site](https://playit.gg/)
 
 </details>
 
 <details>
 <summary><strong>LXC 101 — uptime-kuma</strong></summary>
 
-- OS: Debian 12
-- Specs: 
+- **OS:** Debian 12  
+  - [Official OS site](https://www.debian.org/)
+- **Specs:** 
   - 0.5 GB RAM
   - 1 Core
   - 4 GB Storage
-- Role: Service Heartbeat Monitoring
+- **Role:** Service Heartbeat Monitoring — [Uptime Kuma](https://uptime.kuma.pet/)
 
 </details>
 
 <details>
 <summary><strong>LXC 102 — syncthing</strong></summary>
 
-- OS: Debian 12
-- Specs: 
+- **OS:** Debian 12  
+  - [Official OS site](https://www.debian.org/)
+- **Specs:** 
   - 0.5 GB RAM
   - 1 Core
   - 5 GB Storage
-- Role: Syncing files
+- **Role:** Syncing files — [Syncthing](https://syncthing.net/)
 
 </details>
 
 <details>
 <summary><strong>LXC 103 — web-static</strong></summary>
 
-- OS: Debian 12
-- Specs: 
+- **OS:** Debian 12  
+  - [Official OS site](https://www.debian.org/)
+- **Specs:** 
   - 0.25 GB RAM
   - 1 Core
   - 4 GB Storage
-- Role: Cloudflare Tunnel Entrypoint
+- **Role:** Cloudflare Tunnel Entrypoint — [Cloudflare](https://www.cloudflare.com/)
 
 </details>
 
 <details>
 <summary><strong>LXC 104 — n8n-automation</strong></summary>
 
-- OS: Debian 12 (Docker)
-- Specs: 
-  - 2.0 GB RAM
+- **OS:** Debian 12 (Docker)  
+  - [Official OS site](https://www.debian.org/)
+- **Specs:** 
+  - 2 GB RAM
   - 1 Core
   - 8 GB Storage
-- Role: Sovereign n8n Logic Engine
-
-</details>
+- **Role:** Sovereign n8n Logic Engine — [n8n](https://n8n.io/)
 
 </details>
 
