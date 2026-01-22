@@ -65,8 +65,8 @@
 
 - **OS:** [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) Lite (64-bit)
 - **Services:**
-  - Pi-hole — [Official site](https://pi-hole.net/)
-  - Tailscale — [Official site](https://tailscale.com/)
+  - [Pi-hole](https://pi-hole.net/)
+  - [Tailscale](https://tailscale.com/)
 
 </details>
 
@@ -83,7 +83,7 @@
   - 8 GB RAM
   - 3 Cores
   - 40 GB Storage
-- **Ingress:** Playit.gg Tunnel — [Official site](https://playit.gg/)
+- **Ingress:** [Playit.gg](https://playit.gg/) Tunnel
 
 </details>
 
@@ -119,7 +119,7 @@
   - 0.25 GB RAM
   - 1 Core
   - 4 GB Storage
-- **Role:** Cloudflare Tunnel Entrypoint — [Cloudflare](https://www.cloudflare.com/)
+- **Role:** [Cloudflare](https://www.cloudflare.com/) Tunnel Entrypoint
 
 </details>
 
@@ -131,7 +131,7 @@
   - 2 GB RAM
   - 1 Core
   - 8 GB Storage
-- **Role:** Sovereign n8n Logic Engine — [n8n](https://n8n.io/)
+- **Role:** Sovereign [n8n](https://n8n.io/) Logic Engine
 
 </details>
 
