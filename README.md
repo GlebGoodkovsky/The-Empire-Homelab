@@ -23,6 +23,10 @@
 
 ![rpi4](assets/rpi4.png)
 
+![sd-card](assets/sd-card.png.png)
+
+![pi-case](assets/pi-case.png)
+
 </details>
 
 <details>
