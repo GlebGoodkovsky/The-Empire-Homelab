@@ -63,8 +63,7 @@
 <details>
 <summary><strong>Raspberry Pi 4</strong></summary>
 
-- **OS:** Raspberry Pi OS Lite (64-bit)  
-  - [Official OS site](https://www.raspberrypi.com/software/operating-systems/)
+- **OS:** [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) Lite (64-bit)
 - **Services:**
   - Pi-hole — [Official site](https://pi-hole.net/)
   - Tailscale — [Official site](https://tailscale.com/)
@@ -74,14 +73,12 @@
 <details>
 <summary><strong>Lenovo ThinkCentre</strong></summary>
 
-- **Hypervisor:** Proxmox VE 9.1  
-  - [Official OS site](https://www.proxmox.com/en/)
+- **Hypervisor:** [Proxmox VE](https://www.proxmox.com/en/) 9.1
 
 <details>
 <summary><strong>VM 100 — db-mc-server</strong></summary>
 
-- **OS:** Debian 13  
-  - [Official OS site](https://www.debian.org/)
+- **OS:** [Debian](https://www.debian.org/) 13
 - **Specs:** 
   - 8 GB RAM
   - 3 Cores
@@ -93,8 +90,7 @@
 <details>
 <summary><strong>LXC 101 — uptime-kuma</strong></summary>
 
-- **OS:** Debian 12  
-  - [Official OS site](https://www.debian.org/)
+- **OS:** [Debian](https://www.debian.org/) 12
 - **Specs:** 
   - 0.5 GB RAM
   - 1 Core
@@ -106,8 +102,7 @@
 <details>
 <summary><strong>LXC 102 — syncthing</strong></summary>
 
-- **OS:** Debian 12  
-  - [Official OS site](https://www.debian.org/)
+- **OS:** [Debian](https://www.debian.org/) 12
 - **Specs:** 
   - 0.5 GB RAM
   - 1 Core
@@ -119,8 +114,7 @@
 <details>
 <summary><strong>LXC 103 — web-static</strong></summary>
 
-- **OS:** Debian 12  
-  - [Official OS site](https://www.debian.org/)
+- **OS:** [Debian](https://www.debian.org/) 12
 - **Specs:** 
   - 0.25 GB RAM
   - 1 Core
@@ -132,8 +126,7 @@
 <details>
 <summary><strong>LXC 104 — n8n-automation</strong></summary>
 
-- **OS:** Debian 12 (Docker)  
-  - [Official OS site](https://www.debian.org/)
+- **OS:** [Debian](https://www.debian.org/) 12 (Docker)
 - **Specs:** 
   - 2 GB RAM
   - 1 Core
