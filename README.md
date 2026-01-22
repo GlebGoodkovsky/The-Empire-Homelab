@@ -77,8 +77,6 @@
 - **Hypervisor:** Proxmox VE 9.1  
   - [Official OS site](https://www.proxmox.com/en/)
 
-</details>
-
 <details>
 <summary><strong>VM 100 — db-mc-server</strong></summary>
 
@@ -141,6 +139,8 @@
   - 1 Core
   - 8 GB Storage
 - **Role:** Sovereign n8n Logic Engine — [n8n](https://n8n.io/)
+
+</details>
 
 </details>
 
