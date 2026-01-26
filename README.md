@@ -71,7 +71,7 @@
 </details>
 
 <details>
-<summary><strong>Lenovo ThinkCentre</strong></summary>
+<summary><strong>Lenovo ThinkCentre (Node 01)</strong></summary>
 
 - **Hypervisor:** [Proxmox VE](https://www.proxmox.com/en/) 9.1
 
@@ -84,6 +84,7 @@
   - 3 Cores
   - 40 GB Storage
 - **Ingress:** [Playit.gg](https://playit.gg/) Tunnel
+- **Security:** [Wazuh](https://wazuh.com/) Agent (Endpoint Monitoring)
 
 </details>
 
@@ -112,7 +113,7 @@
 </details>
 
 <details>
-<summary><strong>LXC 103 — web-static</strong></summary>
+<summary><strong>LXC 103 — web-static (Perimeter Defense)</strong></summary>
 
 - **OS:** [Debian](https://www.debian.org/) 12
 - **Specs:** 
@@ -120,6 +121,10 @@
   - 1 Core
   - 4 GB Storage
 - **Role:** [Cloudflare](https://www.cloudflare.com/) Tunnel Entrypoint
+- **Security Stack:**
+  - **IPS:** [CrowdSec](https://www.crowdsec.net/) Security Engine + Firewall Bouncer.
+  - **Config:** Nginx Real-IP unmasking active.
+  - **Telemetry:** [Wazuh](https://wazuh.com/) Agent active.
 
 </details>
 
@@ -130,8 +135,20 @@
 - **Specs:** 
   - 2 GB RAM
   - 1 Core
-  - 8 GB Storage
-- **Role:** Sovereign [n8n](https://n8n.io/) Logic Engine
+  - 12 GB Storage (Resized for stability)
+- **Role:** Sovereign [n8n](https://n8n.io/) Logic Engine & [Portainer](https://www.portainer.io/) Management.
+
+</details>
+
+<details>
+<summary><strong>LXC 105 — wazuh-server</strong></summary>
+
+- **OS:** [Debian](https://www.debian.org/) 12
+- **Specs:** 
+  - 8 GB RAM
+  - 2 Cores
+  - 30 GB Storage
+- **Role:** Security Operations Center (SOC) — [Wazuh](https://wazuh.com/) SIEM/XDR.
 
 </details>
 
@@ -154,10 +171,19 @@
 
 - **Interface:** Telegram Bot
 - **Commands:** 
-  - `/stats pve`: get stats of pve and all LXCs
-  - `/stats vm`: get stats of vm
-  - `/stats pi`: get stats of pi
-  - `/stats help`: get stat command list
-  - `/update`: Manual trigger for safe serverwide update sequence.
+  - `/stats pve`: Stats for Host, VM 100, and LXCs 101-105.
+  - `/stats vm`: Specific stats for the Database VM.
+  - `/stats pi`: Specific stats for the Raspberry Pi.
+  - `/stats help`: Command list.
+  - `/update`: Autonomous fleet patching.
+
+</details>
+
+<details>
+<summary><strong>Project Sentinel (Defense Fabric)</strong></summary>
+
+- **Perimeter:** CrowdSec actively banning threats on LXC 103 (Web) based on community blocklists and behavior.
+- **Intelligence:** [Wazuh](https://wazuh.com/) Agents on VM 100 and LXC 103 feeding vulnerability data and logs to the Central Manager (LXC 105).
+- **Hardening:** Memory Shroud applied to Java processes to maintain resource efficiency.
 
 </details>
