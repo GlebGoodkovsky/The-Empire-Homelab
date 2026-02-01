@@ -67,7 +67,8 @@
 - **Services:**
   - [Pi-hole](https://pi-hole.net/)
   - [Tailscale](https://tailscale.com/)
-  - [Prometheus](https://prometheus.io/docs/guides/node-exporter/) (Hardware Telemetry)
+  - [Uptime Kuma](https://uptime.kuma.pet/) (High Availability Monitor)
+  - [Node Exporter](https://prometheus.io/docs/guides/node-exporter/) (Hardware Telemetry)
 
 </details>
 
@@ -93,25 +94,25 @@
 </details>
 
 <details>
-<summary><strong>LXC 101 — uptime-kuma</strong></summary>
-
-- **OS:** [Debian](https://www.debian.org/) 12
-- **Role:** [Uptime Kuma](https://uptime.kuma.pet/) — Service Heartbeat Monitoring
-
-</details>
-
-<details>
 <summary><strong>LXC 102 — syncthing</strong></summary>
 
 - **OS:** [Debian](https://www.debian.org/) 12
+- **Specs:** 
+  - 0.5 GB RAM
+  - 1 Cores
+  - 5 GB Storage
 - **Role:** [Syncthing](https://syncthing.net/) — Syncing files
 
 </details>
 
 <details>
-<summary><strong>LXC 103 — web-static (Perimeter Defense)</strong></summary>
+<summary><strong>LXC 103 — web-static</strong></summary>
 
 - **OS:** [Debian](https://www.debian.org/) 12
+- **Specs:** 
+  - 256 MB RAM
+  - 1 Core
+  - 4 GB Storage
 - **Role:** [Cloudflare](https://www.cloudflare.com/) Tunnel Entrypoint
 - **Security Stack:**
   - **IPS:** [CrowdSec](https://www.crowdsec.net/) Security Engine + Dual-Layer Bouncer (Firewall & [Nginx](https://nginx.org/en/)).
@@ -124,10 +125,11 @@
 <summary><strong>LXC 104 — n8n-automation (The Brain)</strong></summary>
 
 - **OS:** [Debian](https://www.debian.org/) 12 (Docker)
-- **Role:** Sovereign [n8n](https://n8n.io/) Logic Engine & [Portainer](https://www.portainer.io/) Management.
-- **Observability:** 
-  - [Prometheus](https://prometheus.io/) (Metrics Database)
-  - [Grafana](https://grafana.com/) (Mission Control Dashboard)
+- **Specs:** 
+  - 4 GB RAM
+  - 1 Core
+  - 12 GB Storage
+- **Role:** Sovereign [n8n](https://n8n.io/) Logic Engine, [Portainer](https://www.portainer.io/), & Log Pipeline Orchestrator.
 
 </details>
 
@@ -135,6 +137,10 @@
 <summary><strong>LXC 105 — wazuh-server (The Eye)</strong></summary>
 
 - **OS:** [Debian](https://www.debian.org/) 12
+- **Specs:** 
+  - 8 GB RAM
+  - 2 Core
+  - 30 GB Storage
 - **Role:** [Wazuh](https://wazuh.com/) SIEM/XDR — Security Operations Center (SOC)
 - **Access:** [Tailscale](https://tailscale.com/) ZTNA (Zero Trust Network Access).
 - **Optimization:** JVM Memory Shroud (< 2GB RAM usage).
@@ -160,7 +166,7 @@
 
 - **Interface:** [Telegram](https://telegram.org/) Bot
 - **Commands:** 
-  - `/stats pve`: Stats for Host, VM 100, and LXCs 101-105.
+  - `/stats pve`: Stats for Host, VM 100, and LXCs 102-105.
   - `/stats vm`: Specific stats for the Database VM.
   - `/stats pi`: Specific stats for the Raspberry Pi.
   - `/stats help`: Command list.
