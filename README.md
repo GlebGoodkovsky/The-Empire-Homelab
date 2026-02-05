@@ -115,7 +115,7 @@
 - **Specs:** 
   - 256 MB RAM
   - 1 Core
-  - 4 GB Storage
+  - 5 GB Storage
 - **Role:** [Cloudflare](https://www.cloudflare.com/) Tunnel Entrypoint
 - **Security Stack:**
   - **IPS:** [CrowdSec](https://www.crowdsec.net/) Security Engine + Dual-Layer Bouncer (Firewall & [Nginx](https://nginx.org/en/)).
