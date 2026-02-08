@@ -131,7 +131,7 @@
 - **Specs:** 
   - 4 GB RAM
   - 1 Core
-  - 8 GB Storage
+  - 20 GB Storage
 - **Role:** Sovereign [n8n](https://n8n.io/) Logic Engine, [Portainer](https://www.portainer.io/), & Log Pipeline Orchestrator.
 
 </details>
