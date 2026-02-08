@@ -125,7 +125,7 @@
 </details>
 
 <details>
-<summary><strong>LXC 104 — n8n-automation (The Brain)</strong></summary>
+<summary><strong>LXC 104 — n8n-automation</strong></summary>
 
 - **OS:** [Debian](https://www.debian.org/) 12 (Docker)
 - **Specs:** 
@@ -137,7 +137,7 @@
 </details>
 
 <details>
-<summary><strong>LXC 105 — wazuh-server (The Eye)</strong></summary>
+<summary><strong>LXC 105 — wazuh-server</strong></summary>
 
 - **OS:** [Debian](https://www.debian.org/) 12
 - **Specs:** 
