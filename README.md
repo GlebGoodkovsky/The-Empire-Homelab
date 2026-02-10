@@ -113,7 +113,7 @@
 
 - **OS:** [Debian](https://www.debian.org/) 12
 - **Specs:** 
-  - 256 MB RAM
+  - 512 MB RAM
   - 1 Core
   - 5 GB Storage
 - **Role:** [Cloudflare](https://www.cloudflare.com/) Tunnel Entrypoint
