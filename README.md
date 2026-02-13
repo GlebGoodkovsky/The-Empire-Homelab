@@ -150,6 +150,36 @@
 
 </details>
 
+<details>
+<summary><strong>LXC 106 — matrix</strong></summary>
+
+- **OS:** [Debian](https://www.debian.org/) 12
+- **Specs:** 
+  - 4 GB RAM
+  - 2 Cores
+  - 20 GB Storage
+- **Role:** Private Matrix Communications Server (Synapse Stack)
+- **Software Stack [Docker](https://www.docker.com/):**
+  - **Synapse:** The Matrix homeserver
+  - **PostgreSQL 15:** Dedicated database backend
+  - **[Element Web](https://element.io/en):** The user interface
+  - **[Cloudflare](https://www.cloudflare.com/):** Zero Trust Tunnel for secure ingress (no router ports open).
+- **Access:** [Tailscale](https://tailscale.com/) Backdoor for CLI management and DB maintenance.
+
+### Current Status: "The UDP Wall"
+- **Operational:** Text messaging, image sharing, E2EE, and Space/Room management are 100% functional.
+- **Broken:** **Voice and Video Calls (FaceTime/VOIP).**
+- **Root Cause:** Matrix WebRTC requires UDP traffic. The Free Cloudflare Tunnel operates on TCP (Web traffic), causing call handshakes to drop or time out. Public STUN servers were implemented but cannot punch through the tunnel's bottleneck.
+
+### Future Roadmap: VPS Gateway
+- **Planned:** Migration to a VPS (options being explored are [Hetzner Cloud](https://www.hetzner.com/cloud) VPS) (Target: CX22 - 4GB RAM).
+- **Goal 1:** Host a dedicated [COTURN](https://github.com/coturn/coturn.git) relay on a Public IP to fix Voice/Video.
+- **Goal 2:** Replace the Cloudflare Tunnel with a [WireGuard](https://www.wireguard.com/) site-to-site bridge for full UDP support.
+
+*Future plans are subject to change*
+
+</details>
+
 </details>
 
 ---
